@@ -20,6 +20,15 @@ export class FileProvider implements Provider {
             })
         })
     }
+
+    has(key : string) : Promise<boolean> {
+        let path = `/${this.directory}/${key}`;
+        return new Promise((res, rej) => {
+            fs.access(path, fs.constants.R_OK, (err) => {
+                res(!err);
+            })
+        })
+    }
 }
 
 export default FileProvider

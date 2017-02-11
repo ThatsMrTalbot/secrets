@@ -11,6 +11,11 @@ export class EnvironmentProvider implements Provider {
             return new Buffer(value);
         }
     }
+
+    has(key : string) : Promise<boolean> {
+        let value = process.env[`SECRET_${key.toUpperCase()}`];
+        return Promise.resolve(!!value);
+    }
 }
 
 export default EnvironmentProvider

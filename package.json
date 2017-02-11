@@ -1,6 +1,6 @@
 {
   "name": "@thatsmrtalbot/secrets",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Get secrets from various providers",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",

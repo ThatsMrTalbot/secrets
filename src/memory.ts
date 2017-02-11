@@ -13,6 +13,11 @@ export class MemoryProvider implements Provider {
             return new Buffer(value);
         }
     }
+
+    has(key : string) : Promise<boolean> {
+        let value = this.values[`SECRET_${key.toUpperCase()}`];
+        return Promise.resolve(!!value);
+    }
 }
 
 export default MemoryProvider

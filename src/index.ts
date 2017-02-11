@@ -5,6 +5,8 @@ let _provider : Provider;
 export interface Provider {
     get(key : string) : Promise<Buffer>;
     get(key : string, encoding : string) : Promise<string>;
+
+    has(key : string) : Promise<boolean>;    
 }
 
 export function use(provider : Provider) {
@@ -20,5 +22,13 @@ export function get(key : string, encoding? : string) : Promise<string | Buffer>
         return Promise.reject(
             new Error("No provider specified")
         );
+    }
+}
+
+export function has(key : string) : Promise<boolean> {
+    if (_provider) {
+        return _provider.has(key);
+    }else{
+        return Promise.resolve(false);
     }
 }
