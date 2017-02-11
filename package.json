@@ -1,9 +1,9 @@
 {
   "name": "@thatsmrtalbot/secrets",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Get secrets from various providers",
   "main": "./lib/index.js",
-  "types": "./lib/main.d.ts",
+  "types": "./lib/index.d.ts",
   "repository": {},
   "author": "Adam Talbot",
   "license": "MIT",
