@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "declaration": true,
+        "outDir": "lib",
+        "lib": [
+            "es5",
+            "es2015.promise",
+            "es2015.core",
+            "es2015.iterable"
+        ]
+    },
+    "include": [
+        "src/**/*/ts"
+    ]
+}
